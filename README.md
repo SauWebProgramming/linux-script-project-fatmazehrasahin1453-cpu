@@ -37,3 +37,10 @@ Kullanılan cron satırı:
 
 ```bash
 * * * * * /bin/bash /home/fatmazehra/server-dashboard/monitor.sh
+---
+
+## Dosyalar
+
+- `monitor.sh` : Sunucu durum bilgilerini toplayan bash script
+- `screenshot.png` : Scriptin çalıştığını gösteren ekran görüntüsü
+- `README.md` : Proje açıklaması ve kullanım bilgileri
