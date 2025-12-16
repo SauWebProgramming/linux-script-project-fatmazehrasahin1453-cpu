@@ -1,8 +1,13 @@
 # Linux Sunucu Durum Paneli (Server Dashboard)
 
-Bu proje, Linux kabuk komutlarını kullanarak sunucunun anlık durumunu
-(CPU, RAM, Disk kullanımı ve aktif kullanıcı sayısı) gösteren basit bir
-sunucu durum panelidir.
+Bu proje, Linux kabuk komutları kullanılarak sunucunun anlık durumunu
+(CPU, RAM, Disk kullanımı ve aktif kullanıcı sayısı) gösteren
+basit bir web tabanlı sunucu durum panelidir.
+
+Script tarafından elde edilen bilgiler bir HTML dosyasına yazılır
+ve web tarayıcısı üzerinden görüntülenir.
+
+---
 
 ## Kullanılan Teknolojiler
 - Ubuntu (WSL)
@@ -10,18 +15,25 @@ sunucu durum panelidir.
 - Nginx Web Sunucusu
 - Cron
 
+---
+
 ## Script Açıklaması
-monitor.sh scripti çalıştığında:
-- Sistem tarih ve saatini alır
-- CPU kullanımını hesaplar
-- RAM kullanımını hesaplar
-- Disk doluluk oranını alır
-- Aktif kullanıcı sayısını bulur
-- Bu bilgileri `/var/www/html/index.html` dosyasına HTML olarak yazar
+`monitor.sh` scripti çalıştığında:
 
-## Otomasyon
-Script, cron kullanılarak her 1 dakikada bir otomatik çalışacak şekilde ayarlanmıştır.
+- Sistem tarih ve saat bilgisini alır  
+- CPU kullanım oranını hesaplar  
+- RAM kullanımını hesaplar  
+- Disk doluluk oranını alır  
+- Aktif kullanıcı sayısını tespit eder  
+- Bu bilgileri `/var/www/html/index.html` dosyasına HTML formatında yazar  
 
-## Dosyalar
-- `monitor.sh` : Sunucu durumunu toplayan bash script
-- `screenshot.png` : Scriptin çalıştığını gösteren ekran görüntüsü
+---
+
+## Otomasyon (Cronjob)
+Script, cron kullanılarak her 1 dakikada bir otomatik çalışacak şekilde
+ayarlanmıştır.
+
+Kullanılan cron satırı:
+
+```bash
+* * * * * /bin/bash /home/fatmazehra/server-dashboard/monitor.sh
