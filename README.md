@@ -38,10 +38,9 @@ Script, **cron** kullanılarak her **1 dakikada bir** otomatik çalışacak
 
 
 
-Dosyalar
+## Dosyalar
 
-monitor.sh : Sunucu durum bilgilerini toplayan bash script
+- **monitor.sh** : Sunucu durum bilgilerini (CPU, RAM, Disk, aktif kullanıcı) toplayan bash script  
+- **screenshot.png** : Scriptin çalıştığını ve web panelinin güncellendiğini gösteren ekran görüntüsü  
+- **README.md** : Proje açıklaması, kullanılan teknolojiler ve otomasyon bilgileri
 
-screenshot.png : Scriptin çalıştığını gösteren ekran görüntüsü
-
-README.md : Proje açıklaması ve kullanım bilgileri
