@@ -36,10 +36,6 @@ web tarayıcısı üzerinden görüntülenir.
 Script, **cron** kullanılarak her **1 dakikada bir** otomatik çalışacak
 şekilde ayarlanmıştır.
 
-Kullanılan cron satırı:
-
-```bash
-* * * * * /bin/bash /home/fatmazehra/server-dashboard/monitor.sh```
 
 
 Dosyalar
