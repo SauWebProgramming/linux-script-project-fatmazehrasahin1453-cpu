@@ -39,7 +39,7 @@ Script, **cron** kullanılarak her **1 dakikada bir** otomatik çalışacak
 Kullanılan cron satırı:
 
 ```bash
-* * * * * /bin/bash /home/fatmazehra/server-dashboard/monitor.sh
+* * * * * /bin/bash /home/fatmazehra/server-dashboard/monitor.sh```
 
 
 Dosyalar
